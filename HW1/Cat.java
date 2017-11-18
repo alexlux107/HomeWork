@@ -68,7 +68,6 @@ public class Cat {
 	public String toString() {
 		return "Cat age=" + age + ",\nCat weight=" + weight + ",\nCat name=" + name + 
 			   ",\nCat colorEyes=" + colorEyes + ",\nCat color=" + color + "\n";
-		
 	}
     
     

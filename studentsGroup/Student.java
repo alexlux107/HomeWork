@@ -4,9 +4,9 @@ public class Student extends Human {
 	private boolean contract;
 	private boolean socialBehavior;
 
-	public Student(int age, int weight, int height, boolean sex, String name, boolean contract,
-			boolean socialBehavior) {
-		super(age, weight, height, sex, name);
+	public Student(int age, int weight, int height, boolean sex, String name, String surname, 
+				   boolean contract, boolean socialBehavior) {
+		super(age, weight, height, sex, name, surname);
 		this.contract = contract;
 		this.socialBehavior = socialBehavior;
 	}

@@ -7,14 +7,16 @@ public class Human {
 	private int height;
 	private boolean sex;
 	private String name;
+	private String surname;
 
-	public Human(int age, int weight, int height, boolean sex, String name) {
+	public Human(int age, int weight, int height, boolean sex, String name, String surname) {
 		super();
 		this.age = age;
 		this.weight = weight;
 		this.height = height;
 		this.sex = sex;
 		this.name = name;
+		this.surname = surname;
 	}
 
 	public Human() {
@@ -57,13 +59,20 @@ public class Human {
 		return name;
 	}
 
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	public String getSurname() {
+		return surname;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return " age=" + age + ", weight=" + weight + ", height=" + height + ", sex=" + sex + ", name=" + name;
+		return " age=" + age + ", weight=" + weight + ", height=" + height + ", sex=" + sex + ", name=" + name + ", surname= " + surname;
 	}
 
 }

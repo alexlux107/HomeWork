@@ -4,16 +4,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Student ellise = new Student(17, 55, 166, false, "Ellise", "Schmidt", true, false);
-		Student mira = new Student(18, 56, 170, false, "Mira", "Fischer", true, true);
-		Student sindy = new Student(17, 53, 167, false, "Sindy", "Mayer", false, false);
-		Student jasmine = new Student(19, 52, 164, false, "Jasmine", "Becker", false, true);
-		Student lussy = new Student(20, 56, 170, false, "Lussy", "Koch", false, true);
-		Student alex = new Student(18, 70, 170, true, "Alex", "Richter", true, true);
-		Student will = new Student(20, 75, 172, true, "Will", "Hofmann", true, true);
-		Student gerbert = new Student(18, 77, 173, true, "Gerbert", "Hartmann", false, true);
-		Student norbert = new Student(19, 75, 172, true, "Norbert", "Schmitt", true, false);
-		Student filip = new Student(18, 71, 173, true, "Filip", "Werner", true, false);
+		Student ellise = new Student(17, false, "Ellise", "Schmidt", true, false);
+		Student mira = new Student(18, false, "Mira", "Fischer", true, true);
+		Student sindy = new Student(17, false, "Sindy", "Mayer", false, false);
+		Student jasmine = new Student(19, false, "Jasmine", "Becker", false, true);
+		Student lussy = new Student(20, false, "Lussy", "Koch", false, true);
+		Student alex = new Student(18, true, "Alex", "Richter", true, true);
+		Student will = new Student(20, true, "Will", "Hofmann", true, true);
+		Student gerbert = new Student(18, true, "Gerbert", "Hartmann", false, true);
+		Student norbert = new Student(19, true, "Norbert", "Schmitt", true, false);
+		Student filip = new Student(18, true, "Filip", "Werner", true, false);
 		
 //		Group group = new Group();
 //		

@@ -13,10 +13,6 @@ public class Group implements Army {
 	}
 
 	public void addInfoStudent() {
-
-		boolean sex = false;
-		boolean contract = false;
-		boolean socialBehavior = false;
 		try {
 			for (int i = 0; i < group.length; i++) {
 				if (group[i] != null && group[group.length - 1] != null) {
@@ -24,44 +20,19 @@ public class Group implements Army {
 				}
 			}
 			Scanner scan = new Scanner(System.in);
-
 			System.out.println("Enter name of student: ");
 			String name = scan.nextLine();
-
 			System.out.println("Enter surname of student: ");
 			String surname = scan.nextLine();
-
-			System.out.println("Enter sex of student: ");
-			if (scan.nextLine().equals("man") == true) {
-				sex = true;
-			} else if (scan.nextLine().equals("woman") == true) {
-				sex = false;
-			}
-
 			System.out.println("Enter age of student: ");
 			int age = Integer.parseInt(scan.nextLine());
-
-			System.out.println("Enter weight of student: ");
-			int weight = Integer.parseInt(scan.nextLine());
-
-			System.out.println("Enter height of student: ");
-			int height = Integer.parseInt(scan.nextLine());
-
-			System.out.println("Are student contracter?: ");
-			if (scan.nextLine().equals("true") == true) {
-				contract = true;
-			} else if (scan.nextLine().equals("false") == true) {
-				contract = false;
-			}
-
-			System.out.println("Are the social behavior normal?: ");
-			if (scan.nextLine().equals("true") == true) {
-				socialBehavior = true;
-			} else if (scan.nextLine().equals("false") == true) {
-				socialBehavior = false;
-			}
-
-			Student newStudent = new Student(age, weight, height, sex, name, surname, contract, socialBehavior);
+			System.out.println("Enter sex of student(true - man/false - woman): ");
+			boolean sex = checkInput(scan);
+			System.out.println("Are student contracter?(true/false): ");
+			boolean contract = checkInput(scan);
+			System.out.println("Are the social behavior normal?(true/false): ");
+			boolean socialBehavior = checkInput(scan);
+			Student newStudent = new Student(age, sex, name, surname, contract, socialBehavior);
 			addNewStudent(newStudent);
 
 		} catch (GroupFullException e) {
@@ -130,6 +101,21 @@ public class Group implements Army {
 		}
 		arraysSort(army, comparator);
 		return army;
+	}
+	public boolean checkInput(Scanner scan) {
+		boolean input = true;
+		do {
+			
+		if (scan.nextLine().equals("true") == true) {
+			input = true;
+			return input;
+		} else if (scan.nextLine().equals("false") == false) {
+			input = false;
+			return input;
+		}
+		System.out.println("Wrong input! Only true or false! Please reenter:");
+		}while(scan.nextLine().equals("true") != true || scan.nextLine().equals("false") != false);
+		return input;
 	}
 
 	@Override

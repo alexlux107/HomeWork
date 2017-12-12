@@ -1,7 +1,13 @@
 package studentsGroup;
 
-public class Human {
+import java.io.Serializable;
 
+public class Human implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int age;
 	private boolean sex;
 	private String name;
@@ -42,6 +48,7 @@ public class Human {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
+
 	public String getSurname() {
 		return surname;
 	}
@@ -52,7 +59,7 @@ public class Human {
 
 	@Override
 	public String toString() {
-		return " age=" + age  + ", sex=" + sex + ", name=" + name + ", surname= " + surname;
+		return " age=" + age + ", sex=" + sex + ", name=" + name + ", surname= " + surname;
 	}
 
 }

@@ -1,5 +1,7 @@
 package studentsGroup;
 
+import java.io.File;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -66,8 +68,12 @@ public class Main {
 		System.out.println();
 		
 		System.out.println("Result of search: Norbert\n" + newGroup.searchStudent("Norbert"));
-		
 		System.out.println(newGroup.army());
+		System.out.println();
+		
+        GroupBase.saveToFile(newGroup, new File("Students_Base.txt"));
+        Group groupFromBase =  GroupBase.loadFromFile(new File("group.txt"));
+        System.out.println(groupFromBase);
 	}
 
 }

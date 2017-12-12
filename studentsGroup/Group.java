@@ -1,10 +1,15 @@
 package studentsGroup;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
 
-public class Group implements Army {
+public class Group implements Army, Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static Comparator<Student> comparator;
 	private Student[] group = new Student[10];
 
@@ -102,19 +107,20 @@ public class Group implements Army {
 		arraysSort(army, comparator);
 		return army;
 	}
+
 	public boolean checkInput(Scanner scan) {
 		boolean input = true;
 		do {
-			
-		if (scan.nextLine().equals("true") == true) {
-			input = true;
-			return input;
-		} else if (scan.nextLine().equals("false") == false) {
-			input = false;
-			return input;
-		}
-		System.out.println("Wrong input! Only true or false! Please reenter:");
-		}while(scan.nextLine().equals("true") != true || scan.nextLine().equals("false") != false);
+
+			if (scan.nextLine().equals("true") == true) {
+				input = true;
+				return input;
+			} else if (scan.nextLine().equals("false") == false) {
+				input = false;
+				return input;
+			}
+			System.out.println("Wrong input! Only true or false! Please reenter:");
+		} while (scan.nextLine().equals("true") != true || scan.nextLine().equals("false") != false);
 		return input;
 	}
 
@@ -122,5 +128,7 @@ public class Group implements Army {
 	public String toString() {
 		arraysSort(group, comparator);
 		return "Students:\n" + Arrays.toString(group);
+
 	}
+
 }

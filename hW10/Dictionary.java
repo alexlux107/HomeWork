@@ -41,7 +41,7 @@ public class Dictionary implements Serializable{
 				english = input.nextLine();
 				if (english.equalsIgnoreCase("exit")) {
 					break;
-				}
+				} 
 				System.out.println("Enter ukrainian translation: ");
 				ukrainian = input.nextLine();
 				this.dictionary.put(english, ukrainian);

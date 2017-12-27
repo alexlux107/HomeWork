@@ -10,7 +10,7 @@ public class Main {
 		Map<String, String> dictMap = new HashMap<>();
         File fileDictionary = new File("English.txt");
         Dictionary dictionary = new Dictionary(dictMap);
-        dictionary.addNewTranslate();
+        dictionary.addNewTranslate(); 
         Translate translate =  new Translate(dictionary);
         translate.translate(fileDictionary);
 
